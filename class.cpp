@@ -7,13 +7,15 @@
 using namespace std;
 
 Shape:Shape() :
-
-
 {
-    ui->setupUi(this);
-    scene = new QGraphicsScene(this);
-    scene->setSceneRect(100,100,400,400);
+    Rect = scene->addRect(-200,-200,200,200);
+    Rect->setPen(Qt::NoPen);
+    Rect->setFlag(QGraphicsItem::ItemIsSelectable);
+    Rect->setBrush(QBrush(Qt::Black));
 
+
+
+    scene->setSceneE
 }
 
 void Shape::rotation()
